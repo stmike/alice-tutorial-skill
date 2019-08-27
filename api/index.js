@@ -33,7 +33,7 @@ module.exports = async (req, res) => {
 
   // Быстрый ответ (чтобы не делать лишние запросы к стороннему API) на проверочный пинг от Яндекса:
   if (userUtterance === 'ping') {
-    message = 'OK';
+    message = 'ОК';
     isEndSession = true;
     send(res, statusCode, {
       version,
@@ -43,6 +43,7 @@ module.exports = async (req, res) => {
         end_session: isEndSession
       }
     });
+    return;
   }
 
   // Проверяем новая ли это сессия:
