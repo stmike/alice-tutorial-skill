@@ -46,14 +46,8 @@ module.exports = async (req, res) => {
     return;
   }
 
-  // Проверяем новая ли это сессия:
-  const isNewSession = session.new;
-
   // Проверяем есть ли на устройстве юзера экран (т.е. смартфон или колонка):
   const hasScreen = typeof meta.interfaces.screen !== "undefined" ? true : false;
-
-  // Получаем первую команду юзера (если есть; в противном случае будет пустая строка):
-  const userCommand = lowerCase(request.command);
 
   // Получаем массив всех слов из последней фразы юзера:
   let userWords = [];
@@ -208,7 +202,7 @@ module.exports = async (req, res) => {
   });
 
 
-  // Функция, которая получает данные, и возвращает отформатированную цитату:
+  // Функция, которая получает данные и возвращает отформатированную цитату:
   async function setData() {
     let quote;
     let author;
