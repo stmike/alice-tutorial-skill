@@ -17,6 +17,7 @@ module.exports = async (req, res) => {
   if (req.method !== "POST") {
     statusCode = 400;
     send(res, statusCode, 'Bad Request');
+    return;
   }
 
   // API Яндекс.Диалоги:
