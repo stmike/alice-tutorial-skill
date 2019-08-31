@@ -13,5 +13,5 @@
 * Или, не запуская локальный сервер, выполните команду `now`, затем скопируйте URL в консоли ZEIT, добавьте в конец URL путь к каталогу api (*/api/*) и вставьте в поле "*Webhook URL*" в консоли Яндекс.Диалоги.
 
 ## Лицензия
-**MIT**
+[![GitHub license](https://img.shields.io/github/license/stmike/alice-tutorial-skill)](https://github.com/stmike/alice-tutorial-skill/blob/master/LICENSE)
  
